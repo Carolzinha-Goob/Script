@@ -1,0 +1,25 @@
+-- LocalScript (StarterPlayerScripts ou StarterCharacterScripts)
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local winZone = game:GetService("Workspace").Obby.WinZone
+local spawnLocation = game:GetService("Workspace").SpawnLocation
+
+-- Função que literalmente move o modelo do personagem
+local function moveCharacter(targetPart)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        -- Define a posição do modelo inteiro pelo HumanoidRootPart
+        player.Character:SetPrimaryPartCFrame(
+            CFrame.new(targetPart.Position + Vector3.new(0, 5, 0))
+        )
+    end
+end
+
+-- Loop infinito alternando entre WinZone e SpawnLocation
+while true do
+    moveCharacter(winZone)
+    wait(3)
+    moveCharacter(spawnLocation)
+    wait(3)
+end
