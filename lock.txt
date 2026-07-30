@@ -1,0 +1,55 @@
+--this script lock and unlock the player character
+
+local Player = game.Players.LocalPlayer
+local playergui = Player:WaitForChild("PlayerGui")
+
+	local lockerGui = Instance.new("ScreenGui")
+	lockerGui.Parent = Player.PlayerGui
+	lockerGui.Name = "LockerGui"
+	lockerGui.Enabled = true
+
+	local lockerFrame = Instance.new("Frame")
+	lockerFrame.Parent = lockerGui
+	lockerFrame.Name = "LockerFrame"
+	lockerFrame.Size = UDim2.new(0, 141, 0, 64)
+	lockerFrame.Position = UDim2.new(0.788, 0, 0.22, 0)
+	lockerFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+	lockerFrame.BorderColor3 = Color3.new(1, 1, 1)
+	lockerFrame.BorderSizePixel = 2
+
+	local Mover2 = Instance.new("UIDragDetector")
+	Mover2.Parent = lockerFrame
+
+
+	local lockerText = Instance.new("TextButton")
+	lockerText.Parent = lockerFrame
+	lockerText.Name = "LockerHumanoid"
+	lockerText.Text = "LockerH"
+	lockerText.TextSize = 8
+	lockerText.Size = UDim2.new(0, 55, 0, 33)
+	lockerText.Position = UDim2.new(0.092, 0, 0.234, 0)
+	lockerText.BackgroundColor3 = Color3.new(0, 0, 0)
+	lockerText.BorderColor3 = Color3.new(1, 1, 1)
+	lockerText.TextColor3 = Color3.new(1, 1, 1)
+	lockerText.BorderSizePixel = 2
+	--CLICK
+	connection = lockerText.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.Anchored = true
+	end)
+
+
+	local lockerButton = Instance.new("TextButton")
+	lockerButton.Parent = lockerFrame
+	lockerButton.Name = "LockerButton"
+	lockerButton.Text = "UnlockerH"
+	lockerButton.TextSize = 8
+	lockerButton.Size = UDim2.new(0, 55, 0, 33)
+	lockerButton.Position = UDim2.new(0.546, 0, 0.234, 0)
+	lockerButton.BackgroundColor3 = Color3.new(0, 0, 0)
+	lockerButton.BorderColor3 = Color3.new(1, 1, 1)
+	lockerButton.TextColor3 = Color3.new(1, 1, 1)
+	lockerButton.BorderSizePixel = 2
+	--CLICK
+	connection = lockerButton.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.Anchored = false
+	end)
