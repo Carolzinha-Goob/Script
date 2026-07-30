@@ -1,0 +1,340 @@
+local Player = game.Players.LocalPlayer
+local playerGui = Player:WaitForChild("PlayerGui")
+
+local Gui2 = Instance.new("ScreenGui")
+	Gui2.Parent = playerGui
+	Gui2.Name = "LoadingGui"
+
+local soundlogo = Instance.new("Sound")
+soundlogo.SoundId = "rbxassetid://71803180596130"
+soundlogo.Parent = Gui2  
+soundlogo:Play()
+
+local logo = Instance.new("ImageLabel")
+	logo.Name = "LoadingLogo"
+	logo.Parent = Gui2
+	logo.Image = 'rbxassetid://128703970008750'
+	logo.Size = UDim2.new(0, 324 , 0 , 168)
+	logo.Position = UDim2.new(0.381, 0 , 0.354, 0)
+	logo.BackgroundTransparency = 1
+	task.wait(5)
+	Gui2:Destroy()
+
+local Gui = Instance.new("ScreenGui")
+Gui.Name = "HACKBROO"
+Gui.Parent = playerGui
+
+
+--frame
+local frame = Instance.new("Frame")
+frame.Parent = Gui
+frame.Name = "Frame"
+frame.Size = UDim2.new(0, 207, 0, 139)
+frame.Position = UDim2.new(0.017, 0, 0.682, 0)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BorderColor3 = Color3.new(1, 1, 0)
+frame.BorderSizePixel = 3
+
+--Bagulho de mover
+local Mover = Instance.new("UIDragDetector")
+Mover.Parent = frame
+	
+
+
+
+--botões (lá ele mil veses)
+--GiveChorch butão
+local GiveChorch = Instance.new("TextButton")
+GiveChorch.Parent = frame
+GiveChorch.Name = "GiveChorchButton"
+GiveChorch.Text = "rub balls"
+GiveChorch.TextSize = 8
+GiveChorch.Size = UDim2.new(0, 60, 0, 26)
+GiveChorch.Position = UDim2.new(0.063, 0, 0.065, 0)
+GiveChorch.BackgroundColor3 = Color3.new(0, 0, 0)
+GiveChorch.BorderColor3 = Color3.new(1, 1, 0)
+GiveChorch.TextColor3 = Color3.new(1, 1, 1)
+GiveChorch.BorderSizePixel = 3
+--CLICK
+connection = GiveChorch.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Carolzinha-Goob/Script-dos-hubs/refs/heads/main/test.txt'))()
+end)
+
+
+
+--Fling Manual butão	
+FlingManual = Instance.new("TextButton")
+FlingManual.Parent = frame
+FlingManual.Name = "FlingManualButton"
+FlingManual.Text = "Fling Manual"
+FlingManual.TextSize = 8
+FlingManual.Size = UDim2.new(0, 60, 0, 26)
+FlingManual.Position = UDim2.new(0.353, 0, 0.065, 0)
+FlingManual.BackgroundColor3 = Color3.new(0, 0, 0)
+FlingManual.BorderColor3 = Color3.new(1, 1, 0)
+FlingManual.TextColor3 = Color3.new(1, 1, 1)
+FlingManual.BorderSizePixel = 3
+--CLICK
+connection = FlingManual.MouseButton1Click:Connect(function()
+	wait(1)
+	Player.Character.HumanoidRootPart.CFrame = CFrame.new(0, -100, 0)
+	wait(0.5)
+	Player.Character.HumanoidRootPart.CFrame = CFrame.new(0, -200, 0)
+	wait(0.5)
+	Player.Character.HumanoidRootPart.CFrame = CFrame.new(0, -300, 0)
+	wait(0.5)
+	Player.Character.HumanoidRootPart.CFrame = CFrame.new(0, -400, 0)
+	Player.Character.HumanoidRootPart.CFrame = CFrame.new(-26, 5, -21)
+end)	
+
+
+--Teleport butão
+local Teleport = Instance.new("TextButton")
+Teleport.Parent = frame
+Teleport.Name = "TeleportButton"
+Teleport.Text = "Tp"
+Teleport.TextSize = 8 
+Teleport.Size = UDim2.new(0, 60, 0, 26)
+Teleport.Position = UDim2.new(0.643, 0, 0.065, 0)
+Teleport.BackgroundColor3 = Color3.new(0, 0, 0)
+Teleport.BorderColor3 = Color3.new(1, 1, 0)
+Teleport.TextColor3 = Color3.new(1, 1, 1)
+Teleport.BorderSizePixel = 3
+--CLICK
+connection = Teleport.MouseButton1Click:Connect(function()
+	local TpGui = Instance.new("ScreenGui")
+	TpGui.Parent = Player.PlayerGui
+	TpGui.Name = "TpGui"
+	
+	local TpGuiFrame = Instance.new("Frame")
+	TpGuiFrame.Parent = TpGui
+	TpGuiFrame.Name = "TpGuiFrame"
+	TpGuiFrame.Size = UDim2.new(0, 239, 0, 166)
+	TpGuiFrame.Position = UDim2.new(0.699, 0, 0.628, 0)
+	TpGuiFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpGuiFrame.BorderColor3 = Color3.new(1, 1, 0)
+	TpGuiFrame.BorderSizePixel = 3
+	
+	--Bagulho de mover do Outro bagulho de mover (Tá?)
+	local MoverTpGui = Instance.new("UIDragDetector")
+	MoverTpGui.Parent = TpGuiFrame
+
+	--Teleportar para o lobby
+	local TpInicio = Instance.new("TextButton")	
+	TpInicio.Parent = TpGuiFrame
+	TpInicio.Name = "TpInicio"
+	TpInicio.Text = "Tp Lobby"
+	TpInicio.TextSize = 8
+	TpInicio.Size = UDim2.new(0, 70, 0, 30)
+	TpInicio.Position = UDim2.new(0.051, 0, 0.042, 0)
+	TpInicio.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpInicio.BorderColor3 = Color3.new(1, 1, 0)
+	TpInicio.TextColor3 = Color3.new(1, 1, 1)
+	TpInicio.BorderSizePixel = 3
+	--CLICK
+	connection = TpInicio.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(-26, 5, -21)
+	end)
+	
+	--Teleportar para a colinha
+	local TpFim = Instance.new("TextButton")
+	TpFim.Parent = TpGuiFrame
+	TpFim.Name = "TpFim"
+	TpFim.Text = "Tp Mato"
+	TpFim.TextSize = 8
+	TpFim.Size = UDim2.new(0, 70, 0, 30)
+	TpFim.Position = UDim2.new(0.363, 0, 0.042, 0)
+	TpFim.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpFim.BorderColor3 = Color3.new(1, 1, 0)
+	TpFim.TextColor3 = Color3.new(1, 1, 1)
+	TpFim.BorderSizePixel = 3
+	--CLICK
+	connection = TpFim.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(1144, 77, -1110)
+	end)
+	
+	--Teleportar para a escola
+	local TpEscola = Instance.new("TextButton")
+	TpEscola.Parent = TpGuiFrame
+	TpEscola.Name = "TpEscola"
+	TpEscola.Text = "Tp Escola"
+	TpEscola.TextSize = 8
+	TpEscola.Size = UDim2.new(0, 70, 0, 30)
+	TpEscola.Position = UDim2.new(0.654, 0, 0.042, 0)
+	TpEscola.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpEscola.BorderColor3 = Color3.new(1, 1, 0)
+	TpEscola.TextColor3 = Color3.new(1, 1, 1)
+	TpEscola.BorderSizePixel = 3
+	--CLICK
+	connection = TpEscola.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(-289, 5, 212)
+	end)
+	--teleportar para o hotel
+	local TpHotel = Instance.new("TextButton")
+	TpHotel.Parent = TpGuiFrame
+	TpHotel.Name = "TpHotel"
+	TpHotel.Text = "Tp Hotel"
+	TpHotel.TextSize = 8
+	TpHotel.Size = UDim2.new(0, 70, 0, 30)
+	TpHotel.Position = UDim2.new(0.059, 0, 0.41, 0)
+	TpHotel.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpHotel.BorderColor3 = Color3.new(1, 1, 0)
+	TpHotel.TextColor3 = Color3.new(1, 1, 1)
+	TpHotel.BorderSizePixel = 3
+	--CLICK
+	connection = TpHotel.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(159, 5, 195)
+	end)
+	
+	--teleportar para a montanha
+	local TpMontanha = Instance.new("TextButton")
+	TpMontanha.Parent = TpGuiFrame
+	TpMontanha.Name = "TpMontanha"
+	TpMontanha.Text = "Tp Montanha"
+	TpMontanha.TextSize = 8
+	TpMontanha.Size = UDim2.new(0, 70, 0, 30)
+	TpMontanha.Position = UDim2.new(0.371, 0, 0.41, 0)
+	TpMontanha.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpMontanha.BorderColor3 = Color3.new(1, 1, 0)
+	TpMontanha.TextColor3 = Color3.new(1, 1, 1)
+	TpMontanha.BorderSizePixel = 3
+	--CLICK
+	connection = TpMontanha.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(-681, 261, 777)
+	end)
+	
+	--teleportar para o metro
+	local TpMetro = Instance.new("TextButton")
+	TpMetro.Parent = TpGuiFrame
+	TpMetro.Name = "TpMetro"
+	TpMetro.Text = "Tp Fabrica"
+	TpMetro.TextSize = 8
+	TpMetro.Size = UDim2.new(0, 70, 0, 30)
+	TpMetro.Position = UDim2.new(0.662, 0, 0.41, 0)
+	TpMetro.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpMetro.BorderColor3 = Color3.new(1, 1, 0)
+	TpMetro.TextColor3 = Color3.new(1, 1, 1)
+	TpMetro.BorderSizePixel = 3
+	--CLICK
+	connection = TpMetro.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(508, 4, 387)
+	end)
+	
+	--Teleportar para a Praia
+	local TpPraia = Instance.new("TextButton")
+	TpPraia.Parent = TpGuiFrame
+	TpPraia.Name = "TpPraia"
+	TpPraia.Text = "Tp Praia"
+	TpPraia.TextSize = 8
+	TpPraia.Size = UDim2.new(0, 70, 0, 30)
+	TpPraia.Position = UDim2.new(0.059, 0, 0.71, 0)
+	TpPraia.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpPraia.BorderColor3 = Color3.new(1, 1, 0)
+	TpPraia.TextColor3 = Color3.new(1, 1, 1)
+	TpPraia.BorderSizePixel = 3
+	--CLICK
+	connection = TpPraia.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(-211, 1, 758)
+	end)
+	
+	--Teleportar para o club
+	local TpCubler = Instance.new("TextButton")
+	TpCubler.Parent = TpGuiFrame
+	TpCubler.Name = "TpCubler"
+	TpCubler.Text = "Tp Club"
+	TpCubler.TextSize = 8
+	TpCubler.Size = UDim2.new(0, 70, 0, 30)
+	TpCubler.Position = UDim2.new(0.371, 0, 0.71, 0)
+	TpCubler.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpCubler.BorderColor3 = Color3.new(1, 1, 0)
+	TpCubler.TextColor3 = Color3.new(1, 1, 1)
+	TpCubler.BorderSizePixel = 3
+	--CLICK
+	connection = TpCubler.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(-71, 21, -119)
+	end)
+	
+	local TpArco = Instance.new("TextButton")
+	TpArco.Parent = TpGuiFrame
+	TpArco.Name = "TpArco"
+	TpArco.Text = "Tp Arco"
+	TpArco.TextSize = 8
+	TpArco.Size = UDim2.new(0, 70, 0, 30)
+	TpArco.Position = UDim2.new(0.662, 0, 0.71, 0)
+	TpArco.BackgroundColor3 = Color3.new(0, 0, 0)
+	TpArco.BorderColor3 = Color3.new(1, 1, 0)
+	TpArco.TextColor3 = Color3.new(1, 1, 1)
+	TpArco.BorderSizePixel = 3
+	--CLICK
+	connection = TpArco.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.CFrame = CFrame.new(-589, 142, -60)
+	end)
+end)
+	--Locker (para pestes de flings)	
+	local Locker = Instance.new("TextButton")
+	Locker.Parent = frame
+	Locker.Name = "Locker"
+	Locker.Text = "LockerGui"
+	Locker.TextSize = 8
+    Locker.Size = UDim2.new(0, 60, 0, 26)
+	Locker.Position = UDim2.new(0.063, 0, 0.403, 0)
+	Locker.BackgroundColor3 = Color3.new(0, 0, 0)
+	Locker.BorderColor3 = Color3.new(1, 1, 0)
+	Locker.TextColor3 = Color3.new(1, 1, 1)
+	Locker.BorderSizePixel = 3
+	--CLICK
+	
+	connection = Locker.MouseButton1Click:Connect(function()
+	
+	local lockerGui = Instance.new("ScreenGui")
+	lockerGui.Parent = Player.PlayerGui
+	lockerGui.Name = "LockerGui"
+	lockerGui.Enabled = true
+	
+	local lockerFrame = Instance.new("Frame")
+	lockerFrame.Parent = lockerGui
+	lockerFrame.Name = "LockerFrame"
+	lockerFrame.Size = UDim2.new(0, 141, 0, 64)
+	lockerFrame.Position = UDim2.new(0.788, 0, 0.22, 0)
+	lockerFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+	lockerFrame.BorderColor3 = Color3.new(1, 1, 0)
+	lockerFrame.BorderSizePixel = 3
+	
+	local Mover2 = Instance.new("UIDragDetector")
+	Mover2.Parent = lockerFrame
+	
+	
+	local lockerText = Instance.new("TextButton")
+	lockerText.Parent = lockerFrame
+	lockerText.Name = "LockerHumanoid"
+	lockerText.Text = "LockerH"
+	lockerText.TextSize = 8
+	lockerText.Size = UDim2.new(0, 55, 0, 33)
+	lockerText.Position = UDim2.new(0.092, 0, 0.234, 0)
+	lockerText.BackgroundColor3 = Color3.new(0, 0, 0)
+	lockerText.BorderColor3 = Color3.new(1, 1, 0)
+	lockerText.TextColor3 = Color3.new(1, 1, 1)
+	lockerText.BorderSizePixel = 3
+	--CLICK
+	connection = lockerText.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.Anchored = true
+	end)
+	
+	
+	local lockerButton = Instance.new("TextButton")
+	lockerButton.Parent = lockerFrame
+	lockerButton.Name = "LockerButton"
+	lockerButton.Text = "UnlockerH"
+	lockerButton.TextSize = 8
+	lockerButton.Size = UDim2.new(0, 55, 0, 33)
+	lockerButton.Position = UDim2.new(0.546, 0, 0.234, 0)
+	lockerButton.BackgroundColor3 = Color3.new(0, 0, 0)
+	lockerButton.BorderColor3 = Color3.new(1, 1, 0)
+	lockerButton.TextColor3 = Color3.new(1, 1, 1)
+	lockerButton.BorderSizePixel = 3
+	--CLICK
+	connection = lockerButton.MouseButton1Click:Connect(function()
+		Player.Character.HumanoidRootPart.Anchored = false
+	end)
+
+end)
