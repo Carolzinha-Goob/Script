@@ -1,0 +1,166 @@
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "C00lhacker AntiBestas",
+   Icon = 0,
+   LoadingTitle = "LOL",
+   LoadingSubtitle = "by Carolzinha_Goob",
+   ShowText = "DESTRUIR",
+   Theme = "Default",
+
+   ToggleUIKeybind = "P",
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- vírgula adicionada aqui
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "FolderBig", -- se FolderBig não for variável definida, use string
+      FileName = "BigHub"
+   },
+
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+
+   KeySystem = true,
+   KeySettings = {
+      Title = "Calma calabreso, tu tem a Key?",
+      Subtitle = "Dica: comida favorita de Carolzinha_Goob",
+      Note = "Me pede ai no zap",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"Bolo"}
+   }
+})
+
+--tabs
+local ExitTab = Window:CreateTab("ExitDoor", 4483362458) -- Title, Image
+
+local ComputerTab = Window:CreateTab("Computers", 4483362458) -- Title, Image
+
+
+--Buttons
+
+
+local Button = ComputerTab:CreateButton({
+   Name = "ESP Computer",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+-- LocalScript (StarterPlayerScripts)
+
+local Workspace = game:GetService("Workspace")
+
+-- Função que aplica Highlight vermelho em um model
+local function applyHighlight(model)
+    if model:IsA("Model") and model.Name == "ComputerTable" then
+        -- Verifica se já existe um Highlight
+        if not model:FindFirstChildOfClass("Highlight") then
+            local hl = Instance.new("Highlight")
+            hl.FillColor = Color3.fromRGB(255, 0, 0) -- vermelho
+            hl.OutlineColor = Color3.fromRGB(255, 0, 0)
+            hl.Parent = model
+        end
+    end
+end
+
+-- Aplica Highlight nos que já existem
+for _, obj in pairs(Workspace:GetDescendants()) do
+    applyHighlight(obj)
+end
+
+-- Detecta novos objetos adicionados
+Workspace.DescendantAdded:Connect(function(obj)
+    applyHighlight(obj)
+end)
+   end,
+})
+
+
+
+--new button
+local Button = ExitTab:CreateButton({
+   Name = "ESP ExitDoor",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+-- LocalScript (StarterPlayerScripts)
+
+local Workspace = game:GetService("Workspace")
+
+-- Função que aplica Highlight amarelo em um model chamado ExitDoor
+local function applyHighlight(model)
+    if model:IsA("Model") and model.Name == "ExitDoor" then
+        -- Verifica se já existe um Highlight
+        if not model:FindFirstChildOfClass("Highlight") then
+            local hl = Instance.new("Highlight")
+            hl.FillColor = Color3.fromRGB(255, 255, 0) -- amarelo
+            hl.OutlineColor = Color3.fromRGB(255, 255, 0)
+            hl.Parent = model
+        end
+    end
+end
+
+-- Aplica Highlight nos que já existem
+for _, obj in pairs(Workspace:GetDescendants()) do
+    applyHighlight(obj)
+end
+
+-- Detecta novos objetos adicionados
+Workspace.DescendantAdded:Connect(function(obj)
+    applyHighlight(obj)
+end)
+   end,
+})
+
+-- LocalScript (StarterPlayerScripts)
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- Cria a aba
+local TpPlayers = Window:CreateTab("TP to Player", 4483362458)
+
+-- Tabela para guardar os botões criados
+local playerButtons = {}
+
+-- Função para criar botão de teleporte
+local function createPlayerButton(plr)
+    local Button = TpPlayers:CreateButton({
+        Name = plr.Name,
+        Callback = function()
+            if player.Character and player.Character:FindFirstChild("HumanoidRootPart") 
+            and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+                player.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0)
+            end
+        end,
+    })
+
+    -- Guarda referência
+    playerButtons[plr] = Button
+end
+
+-- Cria botões para jogadores já presentes
+for _, plr in pairs(Players:GetPlayers()) do
+    if plr ~= player then
+        createPlayerButton(plr)
+    end
+end
+
+-- Atualiza lista quando novos jogadores entram
+Players.PlayerAdded:Connect(function(plr)
+    if plr ~= player then
+        createPlayerButton(plr)
+    end
+end)
+
+-- Remove botão quando jogador sai
+Players.PlayerRemoving:Connect(function(plr)
+    if playerButtons[plr] then
+        playerButtons[plr]:Destroy() -- remove o botão da aba
+        playerButtons[plr] = nil
+    end
+end)
