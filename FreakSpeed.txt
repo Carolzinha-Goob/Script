@@ -133,7 +133,7 @@ anim.AnimationId = "rbxassetid://72042024"
 local track = Animator:LoadAnimation(anim)
 track.Looped = true
 track:Play()
-track:AdjustSpeed(8) -- 2x a velocidade normal
+track:AdjustSpeed(100) -- 2x a velocidade normal
 end)
 
 local button5 = Instance.new("TextButton")
