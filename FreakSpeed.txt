@@ -1,0 +1,167 @@
+local player = game.Players.LocalPlayer
+local playergui = player:WaitForChild("PlayerGui")
+
+local guiF = Instance.new("ScreenGui")
+guiF.Parent = playergui
+guiF.Name = "ScreenGuiF"
+
+local FrameF = Instance.new("Frame")
+FrameF.Parent = guiF
+FrameF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FrameF.Size = UDim2.new(0, 232,0, 337)
+FrameF.Position = UDim2.new(0.753, 0 , 0.396, 0)
+FrameF.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FrameF.BorderSizePixel = 2
+
+local button = Instance.new("TextButton")
+button.Parent = FrameF
+button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+button.Size = UDim2.new(0, 200,0, 50)
+button.Position = UDim2.new(0.069, 0,0.053, 0)
+button.Text = "Speed 1"
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.TextSize = 12
+button.BorderColor3 = Color3.fromRGB(255, 255, 255)
+button.BorderSizePixel = 2
+button.MouseButton1Click:Connect(function()
+	--function
+local cloneref = (cloneref or clonereference or function(instance) return instance end)
+
+local Players = cloneref(game:GetService("Players"))
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
+local Animator = Humanoid:WaitForChild("Animator", 5)
+
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://72042024"
+
+local track = Animator:LoadAnimation(anim)
+track.Looped = true
+track:Play()
+track:AdjustSpeed(1) -- 2x a velocidade normal
+end)
+
+local button2 = Instance.new("TextButton")
+button2.Parent = FrameF
+button2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+button2.Size = UDim2.new(0, 200,0, 50)
+button2.Position = UDim2.new(0.069, 0,0.242, 0)
+button2.Text = "Speed 2"
+button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+button2.TextSize = 12
+button2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+button2.BorderSizePixel = 2
+button2.MouseButton1Click:Connect(function()
+	--function
+
+local cloneref = (cloneref or clonereference or function(instance) return instance end)
+
+local Players = cloneref(game:GetService("Players"))
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
+local Animator = Humanoid:WaitForChild("Animator", 5)
+
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://72042024"
+
+local track = Animator:LoadAnimation(anim)
+track.Looped = true
+track:Play()
+track:AdjustSpeed(2) -- 2x a velocidade normal
+end)
+
+local button3 = Instance.new("TextButton")
+button3.Parent = FrameF
+button3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+button3.Size = UDim2.new(0, 200,0, 50)
+button3.Position = UDim2.new(0.069, 0,0.424, 0)
+button3.Text = "Speed 3"
+button3.TextColor3 = Color3.fromRGB(255, 255, 255)
+button3.TextSize = 12
+button3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+button3.BorderSizePixel = 2
+button3.MouseButton1Click:Connect(function()
+	--function
+
+local cloneref = (cloneref or clonereference or function(instance) return instance end)
+
+local Players = cloneref(game:GetService("Players"))
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
+local Animator = Humanoid:WaitForChild("Animator", 5)
+
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://72042024"
+
+local track = Animator:LoadAnimation(anim)
+track.Looped = true
+track:Play()
+track:AdjustSpeed(3) -- 2x a velocidade normal
+end)
+
+local button4 = Instance.new("TextButton")
+button4.Parent = FrameF
+button4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+button4.Size = UDim2.new(0, 200,0, 50)
+button4.Position = UDim2.new(0.069, 0,0.609, 0)
+button4.Text = "Speed 4"
+button4.TextColor3 = Color3.fromRGB(255, 255, 255)
+button4.TextSize = 12
+button4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+button4.BorderSizePixel = 2
+button4.MouseButton1Click:Connect(function()
+	--function
+	
+local cloneref = (cloneref or clonereference or function(instance) return instance end)
+
+local Players = cloneref(game:GetService("Players"))
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
+local Animator = Humanoid:WaitForChild("Animator", 5)
+
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://72042024"
+
+local track = Animator:LoadAnimation(anim)
+track.Looped = true
+track:Play()
+track:AdjustSpeed(8) -- 2x a velocidade normal
+end)
+
+local button5 = Instance.new("TextButton")
+button5.Parent = FrameF
+button5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+button5.Size = UDim2.new(0, 200,0, 50)
+button5.Position = UDim2.new(0.069, 0,0.799, 0)
+button5.Text = "Stop"
+button5.TextColor3 = Color3.fromRGB(255, 255, 255)
+button5.TextSize = 12
+button5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+button5.BorderSizePixel = 2
+button5.MouseButton1Click:Connect(function()
+	--function
+local cloneref = (cloneref or clonereference or function(instance) return instance end)
+
+local Players = cloneref(game:GetService("Players"))
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
+local Animator = Humanoid:WaitForChild("Animator", 5)
+
+-- Para TODAS as animações que estão tocando
+for _, track in Animator:GetPlayingAnimationTracks() do
+    track:Stop(0.1)
+end
+end)
+
+local uidrag = Instance.new("UIDragDetector")
+uidrag.Parent = FrameF
