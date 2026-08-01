@@ -40,7 +40,7 @@ anim.AnimationId = "rbxassetid://72042024"
 local track = Animator:LoadAnimation(anim)
 track.Looped = true
 track:Play()
-track:AdjustSpeed(1) -- 2x a velocidade normal
+track:AdjustSpeed(1) 
 end)
 
 local button2 = Instance.new("TextButton")
@@ -71,7 +71,7 @@ anim.AnimationId = "rbxassetid://72042024"
 local track = Animator:LoadAnimation(anim)
 track.Looped = true
 track:Play()
-track:AdjustSpeed(2) -- 2x a velocidade normal
+track:AdjustSpeed(2)
 end)
 
 local button3 = Instance.new("TextButton")
@@ -102,7 +102,7 @@ anim.AnimationId = "rbxassetid://72042024"
 local track = Animator:LoadAnimation(anim)
 track.Looped = true
 track:Play()
-track:AdjustSpeed(3) -- 2x a velocidade normal
+track:AdjustSpeed(8) 
 end)
 
 local button4 = Instance.new("TextButton")
@@ -133,7 +133,7 @@ anim.AnimationId = "rbxassetid://72042024"
 local track = Animator:LoadAnimation(anim)
 track.Looped = true
 track:Play()
-track:AdjustSpeed(100) -- 2x a velocidade normal
+track:AdjustSpeed(10000) 
 end)
 
 local button5 = Instance.new("TextButton")
@@ -157,7 +157,7 @@ local Character = Player.Character or Player.CharacterAdded:Wait()
 local Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
 local Animator = Humanoid:WaitForChild("Animator", 5)
 
--- Para TODAS as animações que estão tocando
+
 for _, track in Animator:GetPlayingAnimationTracks() do
     track:Stop(0.1)
 end
