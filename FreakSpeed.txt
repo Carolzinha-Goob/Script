@@ -4,6 +4,7 @@ local playergui = player:WaitForChild("PlayerGui")
 local guiF = Instance.new("ScreenGui")
 guiF.Parent = playergui
 guiF.Name = "ScreenGuiF"
+guiF.ResetOnSpawn = false
 
 local FrameF = Instance.new("Frame")
 FrameF.Parent = guiF
