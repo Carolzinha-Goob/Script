@@ -23,43 +23,43 @@ botao2 = tk.Button(janela, text="MS-DOS 6.22 (EN)", command=clique)
 botao2.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT5.1/2600.5512/Pro/pt-br_windows_xp_professional_with_service_pack_3_x86_cd_x14-80400.iso?md5=l-_r1BWInpYTUAeanFwyAA&expires=1786927816")
+    webbrowser.open("https://dn790002.ca.archive.org/0/items/WinXPProSP3PortugueseBrazilian/pt-br_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74137.is")
 
 botao3 = tk.Button(janela, text="XP PROFESSIONAL (x86-X64) (PT-BR)", command=clique)
 botao3.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT6.0/6002.18005/client/Multi/pt_windows_vista_with_sp2_x64_dvd_x15-36319.iso?md5=_nJUCRRio_7trFqrCj79pA&expires=1786928022")
+    webbrowser.open("https://dn710106.ca.archive.org/0/items/vista_x64/vista_x64.iso")
 
-botao4 = tk.Button(janela, text="VISTA x86-64 (64-bit) Multi-Edition (PT-BR)", command=clique)
+botao4 = tk.Button(janela, text="VISTA x86-64 (64-bit) Ultimate (PT-BR)", command=clique)
 botao4.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT6.1/7601.17514/client/Ultimate/pt_windows_7_ultimate_with_sp1_x64_dvd_u_677358.iso?md5=igRNA9jRAR1_k6naVl_a1Q&expires=1786924853")
+    webbrowser.open("https://dn721605.ca.archive.org/0/items/Windows7_x86-x64_ptBR_Pack_MSDN/pt_windows_7_professional_with_sp1_x86_dvd_u_677096.iso")
 
 botao5 = tk.Button(janela, text="WINDOWS 7 PROFESSIONAL x86-64 (64-bit) (PT-BR)", command=clique)
 botao5.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT6.2/9200.16384/client/en_windows_8_x64_dvd_915440.iso?md5=CvcWAVHhifoWpxfMUymPEw&expires=1786924849")
+    webbrowser.open("https://dn721505.ca.archive.org/0/items/HRMCCSAX64FREPTBRDV5/HRM_CCSA_X86FRE_PT-BR_DV5.ISO")
 
 botao6 = tk.Button(janela, text="WINDOWS 8 Multi-Edition x86-64 (64-bit) (PT-BR)", command=clique)
 botao6.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT6.3/9600/16384/client/en_windows_8_1_x64_dvd_2707217.iso?md5=qnNIm2YvwkvvwQDzuluq0A&expires=1786924802")
+    webbrowser.open("https://dn720708.ca.archive.org/0/items/win-8.1-single-lang-brazilian-portuguese_202301/Win8.1_SingleLang_BrazilianPortuguese_x64.iso")
 
 botao7 = tk.Button(janela, text="WINDOWS 8.1 Multi-Edition x86-64 (64-bit) (PT-BR)", command=clique)
 botao7.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT10/2016_LTSB/Enterprise/pt_windows_10_enterprise_2016_ltsb_x64_dvd_9060113.iso?md5=AQbPWM66DImSLCBtJII83A&expires=1786929512")
+    webbrowser.open("https://ia600603.us.archive.org/32/items/Win10HomeProTH2PTBR/Win10_1511_2_BrazilianPortuguese_x64.iso")
 
 botao8 = tk.Button(janela, text="WINDOWS 10 Multi-Edition x86-64 (64-bit) (PT-BR)", command=clique)
 botao8.pack()
 
 def clique():
-    webbrowser.open("https://dl.os.click/OS/NT10/Win11_26100/1742/en-us_windows_11_consumer_editions_version_24h2_x64_dvd_1d5fcad3.iso?md5=dycBh5Dwxkt0a8a3mhb5MA&expires=1786924845")
+    webbrowser.open("https://software.download.prss.microsoft.com/dbazure/Win11_25H2_BrazilianPortuguese_x64_v2.iso?t=68382c8c-5478-4dbc-8f54-60139b7a0272&P1=1787068322&P2=602&P3=2&P4=gy9XjV4oZm5PlMbngilR8yhAgpfIxR%2f4nktqUJpKosmAHjujfFH1PlM4FCF6Wg%2bu5SLPzsVR1SiwXBc3Sxumttbp7AEDkR2oygSlUJaxsghuo6qs5bwiKGV%2bSM8b9odasHmfdIl77lD4NNrKcRSsQskvDbpr%2bqixHOEb%2fd6VbuUc%2bNdicuBhl%2b19PYIaDcthONe5DU0nUf9tKrlT7R7kmbigMpMrJsYeLqNkHZ4kQuo3FhntM%2bRn8cEwZGwdlKzdJ9Zu8ERjBmYJqtvP7NaGm7WT1zhpmlPu7VekYOYEG6m4OnYLnjF%2f9pNzILiw8Sfv5wZbe2RdNGWLT9wUiaePAA%3d%3d")
 
 botao9 = tk.Button(janela, text="WINDOWS 11 Multi-Edition x86-64 (64-bit) (PT-BR)", command=clique)
 botao9.pack()
